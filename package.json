@@ -1,5 +1,5 @@
 {
-  "name": "date_picker",
+  "name": "mzind_date_picker",
   "version": "0.0.0",
   "main": "src/index.js",
   "type": "module",
