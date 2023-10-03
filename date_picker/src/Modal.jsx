@@ -2,7 +2,7 @@ import React from 'react';
 import classes from './styles/Modal.module.css';
 import PropTypes from 'prop-types';
 import CrossIcon from './icons/CrossIcon';
-import Span from '../Span';
+import Span from './Span';
 
 /**
  * Composant Modal pour afficher une boîte modale personnalisée.
