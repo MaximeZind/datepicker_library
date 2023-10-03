@@ -1,35 +1,33 @@
-import React from "react";
-import Modal from "../Modal";
+import DateInput from "../DateInput";
 
 function UseExample() {
-    const [isModalOpen, setIsModalOpen] = useState(false);
-  
-    const openModal = () => {
-      setIsModalOpen(true);
-    };
-  
-    const closeModal = () => {
-      setIsModalOpen(false);
-    };
-  
-    return (
-      <div>
-        <button onClick={openModal}>Open Modal</button>
-        {isModalOpen && (
-          <Modal
-            closeModal={closeModal}
-            maxWidth={500}
-            modalBackgroundColor="#fff"
-            iconColor="#333"
-            hoveredIconBackgroundColor="#ccc"
-          >
-            {/* Content for your modal */}
-            <h2>Hello, Modal!</h2>
-            <p>This is an example of how to use the Modal component from your package.</p>
-          </Modal>
-        )}
-      </div>
-    );
-  }
 
-  export default UseExample;
+
+    return (
+        <div>
+            <DateInput
+                name="randomName"
+                label="Random Label"
+                errorMsg="Random Error Message"
+                yearsRangeMin={1950}
+                yearsRangeMax={2030}
+                defaultValue="2020-01-01"
+                labelColor="#FF5733"
+                focusedLabelColor="#45AAB8"
+                boxShadowColor="#8A2BE2"
+                fontColor="#2E8B57"
+                selectedDayFontColor="#FFD700"
+                previousNextMonthFontColor="#FFA07A"
+                iconColor="#6495ED"
+                backgroundColor="#F5DEB3"
+                hoveredBackgroundColor="#7FFF00"
+                selectedDayBackgroundColor="#FF4500"
+                selectedMonthYearBackgroundColor="#D2691E"
+                todayBackgroundColor="#A9A9A9"
+                borderBottomColor="#4B0082"
+            />
+        </div>
+    );
+}
+
+export default UseExample;
