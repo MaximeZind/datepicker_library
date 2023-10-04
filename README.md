@@ -16,13 +16,13 @@ A customizable date input component with a date picker that opens and closes.
 
 You can install this component via npm:
 
-`npm install date_picker`
+`npm install maximez_date_picker`
 
 ## Usage
 
 # Import the component
 
-`import { DateInput } from 'mzind_date_picker';`
+`import {DateInput} from 'maximez_date_picker';`
 
 # Include the DateInput component in your JSX
 
