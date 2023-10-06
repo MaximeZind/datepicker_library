@@ -32,7 +32,7 @@ function DateInputField({ type, characters, elementRef, defaultValue, onBlur, on
             ref={elementRef}
             defaultValue={defaultValue}
             style={{
-                width: `${characters}ch`,
+                width: `${characters+0.5}ch`,
                 color: fontColor && fontColor
             }}
             onBlur={onBlur}

@@ -3,7 +3,7 @@ import classes from './styles/DatePickerBox.module.css';
 import PropTypes from 'prop-types';
 import DoubleArrow from './icons/DoubleArrow';
 import Arrow from './icons/Arrow';
-import Span from '../Span';
+import Span from './Span';
 import DateInputField from './DateInputField';
 
 /**
