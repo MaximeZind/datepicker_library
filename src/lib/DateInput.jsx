@@ -114,7 +114,10 @@ function DateInput({ name, label, errorMsg, yearsRangeMin, yearsRangeMax, defaul
     return (
         <div className={isFocused ? `${classes.date_input_container} ${classes.focused}` : classes.date_input_container}
             ref={datePicker}>
-            <label style={{ color: isFocused ? focusedLabelColor && focusedLabelColor : labelColor && labelColor }}
+            <label
+            style={{ 
+                color: isFocused ? focusedLabelColor && focusedLabelColor : labelColor && labelColor 
+            }}
                 className={classes.label} htmlFor={name} onClick={() => setIsOpen(!isOpen)}>
                 {label}
             </label>
@@ -128,7 +131,10 @@ function DateInput({ name, label, errorMsg, yearsRangeMin, yearsRangeMax, defaul
                 }}
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}>
-                <p className={classes.selected_date}>{selectedValue}</p>
+                <p className={classes.selected_date}
+                style={{
+                    minWidth: `${label.length*10}px`,
+                }}>{selectedValue}</p>
                 <span className={classes.date_input_icon}
                     style={{ backgroundColor: (isHovered || isOpen) ? hoveredBackgroundColor && hoveredBackgroundColor : '' }}>
                     <Calendar width={20} height={20} color={iconColor && iconColor} />
@@ -163,7 +169,7 @@ function DateInput({ name, label, errorMsg, yearsRangeMin, yearsRangeMax, defaul
 
 DateInput.propTypes = {
     name: PropTypes.string.isRequired,
-    label: PropTypes.string,
+    label: PropTypes.string.isRequired,
     errorMsg: PropTypes.string,
     yearsRangeMax: PropTypes.number,
     yearsRangeMin: PropTypes.number,

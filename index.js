@@ -1,3 +1,3 @@
-import DateInput from './src/DateInput';
+import DateInput from './src/lib/DateInput';
 
 modules.export = {DateInput};

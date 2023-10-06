@@ -6,11 +6,7 @@ A customizable date input component with a date picker that opens and closes.
 
 - [NodeJS (**version v20.0.0 or higher**)](https://nodejs.org/en/)
 - [npm (**v9.6.4 or higher**)](https://www.npmjs.com/)
-- [eslint (**version 1.4.0 or higher**)](https://eslint.org/)
-- [vite (**version ^4.3.2 or higher**)](https://vitejs.dev/)
 - [react (**version ^18.2.0 or higher**)](https://react.dev/)
-- [react-router-dom (**version ^6.11.2 or higher**)](https://reactrouter.com/en/main)
-- [prop-types (**version ^15.8.1 or higher**)](https://www.npmjs.com/package/prop-types)
 
 ## Installation
 
@@ -26,7 +22,8 @@ You can install this component via npm:
 
 # Include the DateInput component in your JSX
 
-```                <DateInput name='name'
+```               
+                <DateInput name='name'
                     label='label'
                     errorMsg={startDateErrorMsg}
                     yearsRangeMin={1923}
@@ -43,7 +40,7 @@ You can install this component via npm:
                     selectedDayBackgroundColor={colorPalette.quarternaryColor}
                     selectedMonthYearBackgroundColor={colorPalette.senaryColor}
                     todayBackgroundColor={colorPalette.senaryColor}
-                    borderBottomColor={colorPalette.senaryColor} />```
+                    borderBottomColor={colorPalette.senaryColor} />
 ```
 
 # Customize the component by passing props
@@ -54,6 +51,7 @@ You can install this component via npm:
 - `yearsRangeMin`: The minimum year available in the date picker.
 - `yearsRangeMax`: The maximum year available in the date picker.
 - `defaultValue`: The default value for the input (format: "MM/DD/YYYY").
+- `dateInputField`: A manual input field to give the possibility to write the date instead of clicking.
 - `labelColor`: The color of the label.
 - `focusedLabelColor`: The color of the label when focused.
 - `boxShadowColor`: The color of the input box shadow.

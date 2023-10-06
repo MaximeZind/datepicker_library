@@ -1,17 +1,24 @@
-import DateInput from "../DateInput";
+import DateInput from "../lib/DateInput";
 
-function UseExample() {
-
+function UseExampleFullyCustomized() {
 
     return (
-        <div>
+        <div
+        style={{
+            display: "flex",
+            flexDirection: 'column',
+            alignItems: 'center',
+            gap: "50px",
+        }}>
+            <h1>Fully (randomly) customized Date Picker</h1>
             <DateInput
                 name="randomName"
-                label="Random Label"
+                label="My Date"
                 errorMsg="Random Error Message"
                 yearsRangeMin={1950}
                 yearsRangeMax={2030}
                 defaultValue="2020-01-01"
+                dateInputField={true}
                 labelColor="#FF5733"
                 focusedLabelColor="#45AAB8"
                 boxShadowColor="#8A2BE2"
@@ -30,4 +37,4 @@ function UseExample() {
     );
 }
 
-export default UseExample;
+export default UseExampleFullyCustomized;
