@@ -1,4 +1,4 @@
-# Modal Component
+# Date Picker Component
 
 A customizable date input component with a date picker that opens and closes.
 

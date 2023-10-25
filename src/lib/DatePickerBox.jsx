@@ -53,8 +53,7 @@ function DatePickerBox({ elementRef, position, handleValues, handleClose, starti
     const dayInput = useRef(null);
     const yearInput = useRef(null);
 
-
-    // Type d'array dans la grid: jours par défaut, mais peut être "months" ou "years";
+    // Type d'array dans la grid: jours par défaut, mais peut être "months" ou "years"
     const [arrayType, setArrayType] = useState('days');
 
     const gridArray = getGridArray(year, month);
@@ -76,7 +75,7 @@ function DatePickerBox({ elementRef, position, handleValues, handleClose, starti
 
     const week = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 
-    // Fonction pour envoyer la data vers le composant parent via "handleValues"
+    // Fonction pour envoyer la data vers le composant parent via "handleValues" //
     function sendData(day, month, year, close) {
         setSelectedDay(day);
         if (month === 0) {
@@ -101,6 +100,9 @@ function DatePickerBox({ elementRef, position, handleValues, handleClose, starti
         }
     }
 
+    // On genere les differentes array (years, days, months) a afficher //
+
+
     function getYearsArray() {
         const currentYear = today.getFullYear();
         let yearsArray = [];
@@ -114,7 +116,7 @@ function DatePickerBox({ elementRef, position, handleValues, handleClose, starti
         return yearsArray;
     }
 
-    // fonction qui sert à générer les arrays de jours qui figurent dans le tableau
+    // fonction qui sert à générer les arrays de jours qui figurent dans le tableau 
     function getGridArray(year, month) {
 
         const firstDay = new Date(year, month - 1, 1).getDay();
@@ -151,6 +153,8 @@ function DatePickerBox({ elementRef, position, handleValues, handleClose, starti
         12: "December"
     };
 
+    // Fonctions de selection du mois / de l'annee //
+
     function handleSelectMonth(number) {
         setMonth(number);
         setSelectedMonth(number);
@@ -169,7 +173,7 @@ function DatePickerBox({ elementRef, position, handleValues, handleClose, starti
         }, 30);
     }
 
-    // Fonctions de navigations entre les mois
+    // Fonctions de navigations entre les mois //
     function handleNextMonth() {
         if (month === 12) {
             setMonth(1);
@@ -188,7 +192,7 @@ function DatePickerBox({ elementRef, position, handleValues, handleClose, starti
         }
     }
 
-    // INPUT FIELDS //
+    // Fonctions de gestion de l'input manuel //
 
     function selectInput(event) {
         const inputField = event.target;
@@ -255,6 +259,7 @@ function DatePickerBox({ elementRef, position, handleValues, handleClose, starti
         }
     }
 
+    // UseEffect pour synchroniser l'input manuel avec la date choisie (cliquee)
     useEffect(() => {
         if (dayInput.current && monthInput.current && yearInput.current) {
             dayInput.current.value = selectedDay.toString().padStart(2, '0');
